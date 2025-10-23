@@ -9,12 +9,12 @@ test.describe('Testing Category Selection Functionality', () => {
         await basePage.verifBooksToScrapeTitle();
     })
     
-    test('Customer selects Autobiography Category', async ({ basePage }) => {
+    test('Customer selects specific Category', async ({ basePage }) => {
         await basePage.clickCategory(BookCategories.AUTOBIOGRAPHY);
         await basePage.verifyCategoryTitle(BookCategories.AUTOBIOGRAPHY);
     }),
 
-    test('Customer Clicks Next and Previous buttons to navigate between product pages', async ({ basePage }) => {
+    test('Customer clicks Next and Previous buttons to navigate between product pages', async ({ basePage }) => {
         await basePage.clickCategory(BookCategories.NONFICTION);
         await basePage.clickNextButton();
         await basePage.verifyPage(2);
