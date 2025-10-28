@@ -7,7 +7,9 @@ The tests within this repository are split into two folders of tests:
 ## Setup
   - Download or clone this repository
   - Ensure your terminal is sat in the root folder
+  - You may need to set your Node version using ```nvm use```
   - Run ``` npm install ``` to install 
+  - ** If you have issues when attempting to run the scripts - you may need to use ```npx playwright install```
 
 ## Running the tests
 To run the individual tests navigate to your terminal at the root folder and enter the following commands:
@@ -17,9 +19,9 @@ To run the individual tests navigate to your terminal at the root folder and ent
 ## Tool Choice
 For this project, Typescript and Playwright have been selected as the primary tools for development.
 
-**Typescript** has been chosen primarily for it's ability to catch errors before runtime. Ensuring methods are correctly typed can reduce the amount of testing required to ensure the framework is stable and consistent.
+**Typescript** has been chosen primarily for its ability to catch errors before runtime. Ensuring methods are correctly typed can reduce the amount of testing required to ensure the framework is stable and consistent.
 
-**Playwright** has been chosen for it's ease of use, maintainability and support. There is a reason that Playwright has been the cool kid on the block for a few years now. Below are some of the many reasons it was chosen:
+**Playwright** has been chosen for its ease of use, maintainability and support. There is a reason that Playwright has been the cool kid on the block for a few years now. Below are some of the many reasons it was chosen:
 - Ease of setup (```npm init playwright@latest``` and you've got an instantly runnable test)
 - Tools straight out of the box that do exactly what they say on the tin
 - Code is extremely readable
@@ -36,13 +38,13 @@ The E2E folder contains 4 tests:
 - Customer Views the Product Page
 
 ### Why were these scenarios chosen?
-These scenarios were chosen to cover the main, critical functionality to the customer usability of the [Books To Scrape](https://books.toscrape.com) web page. As this is a brand new repository, it's important to set the foundations in place within the testing suite. Ideally, any regression on the components covered within these tests would be caught as they cover the basic functionality customers would be using to purchase a product.
+These scenarios were chosen to cover the main, critical functionality to the customer usability of the [Books To Scrape](https://books.toscrape.com) web page. As this is a brand new repository, its important to set the foundations in place within the testing suite. Ideally, any regression on the components covered within these tests would be caught as they cover the basic functionality customers would be using to purchase a product.
 
 I tried to ensure the tests did not repeat code or functionality between each file - this helps to reduce runtime, diminishing returns and increases readability of the tests.
 
-In it's current state of Books To Scrape - I deemed the basic functionality as most critical - if the basics don't work, we can't sell books. 
+In its current state of Books To Scrape - I deemed the basic functionality as most critical - if the basics don't work, we can't sell books. 
 
-Here are my top 5 product risks for Books To Scrape in it's current format:
+Here are my top 5 product risks for Books To Scrape in its current format:
 - Adding To Basket button
 - Pagination functionality
 - View Product page
@@ -67,7 +69,7 @@ However, if this app were to contain more complex features that spanned multiple
 ##### Sidenote: I would have liked to cover basket functionality, but It looks as though this isn't present or available on Books To Scrape.
 
 With more time and thought I would have liked to include the following:
-- Improved results checks (verifyBookCount is simple in it's current form)
+- Improved results checks (verifyBookCount is simple in its current form)
   - Add variability to the check that books on the page matches the results count
 - Boundary checks on book prices
 - Tests to ensure previous and next buttons are not present on first and last page
@@ -104,7 +106,7 @@ I chose these 3 scenarios to cover 3 basic checks on the API:
 
 By covering these 3 basic scenarios, we can confirm that valid requests behave correctly and invalid ones fail in a predictable and controlled manner.
 
-As per my understanding, it's very difficult to receive anything but a 200 success status without switching off services or authentication integrated into the API.
+As per my understanding, its very difficult to receive anything but a 200 success status without switching off services or authentication integrated into the API.
 
 With more time I would have liked to have included the following:
 - With more time I'd have liked to have abstracted all of the request and test functionality
